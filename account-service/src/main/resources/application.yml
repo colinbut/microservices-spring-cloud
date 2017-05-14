@@ -1,6 +1,9 @@
 spring:
     application:
         name: accounts-service
+    output:
+      ansi:
+        enabled: ALWAYS
     h2:
       console:
         enabled: true
