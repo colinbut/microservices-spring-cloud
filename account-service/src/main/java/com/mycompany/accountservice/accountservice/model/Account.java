@@ -3,7 +3,7 @@
  * | Copyright © 2017 Colin But. All rights reserved. 
  * |-------------------------------------------------
  */
-package com.mycompany.accountservice.accountservice;
+package com.mycompany.accountservice.accountservice.model;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
