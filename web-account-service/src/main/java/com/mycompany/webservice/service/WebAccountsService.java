@@ -3,7 +3,7 @@
  * | Copyright © 2017 Colin But. All rights reserved. 
  * |-------------------------------------------------
  */
-package com.mycompany.webaccountservice.webaccountservice.service;
+package com.mycompany.webservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
