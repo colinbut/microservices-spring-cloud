@@ -11,6 +11,7 @@
         <module>service-discovery-service</module>
         <module>account-service</module>
         <module>web-service</module>
+        <module>demo</module>
     </modules>
 
     <properties>
