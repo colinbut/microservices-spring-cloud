@@ -8,11 +8,12 @@ But the difference with this one is that this one uses Spring Cloud entirely to 
 
 Spring Cloud / Netflix OSS 
 
-| Service/Feature   | Netflix Component |
-| ----------------- | :---------------: |
-| Service Discovery | Eureka            |
-| Load Balancing    | Ribbon            |
-| Circuit Breaker   | Hysterix          |
+| Service/Feature             | Spring Cloud Component         | Netflix Component |
+| --------------------------- | :----------------------------: | ----------------- |
+| Service Discovery           | Spring Cloud Eureka            | Eureka            |
+| Load Balancing              | Spring Cloud Ribbon            | Ribbon            |
+| Circuit Breaker             | Spring Cloud Hysterix          | Hysterix          |
+| Centralized Configuration   | Spring Cloud Config Server     | [NONE]            |
 
 
  
