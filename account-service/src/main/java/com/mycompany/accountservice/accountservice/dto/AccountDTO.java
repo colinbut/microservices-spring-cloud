@@ -14,23 +14,26 @@ public class AccountDTO {
         return id;
     }
 
-    public void setId(int id) {
+    public AccountDTO setId(int id) {
         this.id = id;
+        return this;
     }
 
     public String getAccountName() {
         return accountName;
     }
 
-    public void setAccountName(String accountName) {
+    public AccountDTO setAccountName(String accountName) {
         this.accountName = accountName;
+        return this;
     }
 
     public String getAccountDescription() {
         return accountDescription;
     }
 
-    public void setAccountDescription(String accountDescription) {
+    public AccountDTO setAccountDescription(String accountDescription) {
         this.accountDescription = accountDescription;
+        return this;
     }
 }
