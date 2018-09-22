@@ -1,6 +1,4 @@
-# Microservices Spring Cloud
-
-"Microservices example demo - using Spring Cloud Project"
+# Microservices Spring Cloud/Netflix OSS
 
 This is another of my microservices example demo project. This is quite similar to my other microservice example project: https://github.com/colinbut/microservices-online-webshop. 
 
