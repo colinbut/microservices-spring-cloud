@@ -7,9 +7,11 @@ package com.mycompany.accountservice.accountservice.dto;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @Builder
+@NoArgsConstructor
 public class AccountDTO {
     private int id;
     private String accountName;

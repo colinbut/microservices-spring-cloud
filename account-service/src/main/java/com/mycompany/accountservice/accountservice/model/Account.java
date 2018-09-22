@@ -6,8 +6,7 @@
 package com.mycompany.accountservice.accountservice.model;
 
 import lombok.Data;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
+@NoArgsConstructor
 @Entity
 @Table(name = "account")
 public class Account {
