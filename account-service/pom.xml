@@ -25,6 +25,7 @@
 		<spring-cloud.version>Dalston.RELEASE</spring-cloud.version>
 		<apache.commons.lang3.version>3.4</apache.commons.lang3.version>
 		<assertj.version>3.11.1</assertj.version>
+		<mockito2.junit5.version>2.22.0</mockito2.junit5.version>
 	</properties>
 
 	<dependencies>
@@ -73,8 +74,17 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito2.junit5.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>${mockito2.junit5.version}</version>
 			<scope>test</scope>
 		</dependency>
 
