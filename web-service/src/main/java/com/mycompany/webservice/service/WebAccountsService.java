@@ -5,8 +5,9 @@
  */
 package com.mycompany.webservice.service;
 
-import com.mycompany.accountservice.accountservice.dto.AccountDTO;
+
 import com.mycompany.webservice.controller.resource.AccountResource;
+import com.mycompany.webservice.dto.AccountDTO;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
