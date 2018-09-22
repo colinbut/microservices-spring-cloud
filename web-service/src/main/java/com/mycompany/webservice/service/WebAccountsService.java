@@ -8,6 +8,7 @@ package com.mycompany.webservice.service;
 
 import com.mycompany.webservice.controller.resource.AccountResource;
 import com.mycompany.webservice.dto.AccountDTO;
+import com.mycompany.webservice.mapper.AccountMapper;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -34,12 +35,8 @@ public class WebAccountsService {
             AccountDTO.class, accountNumber);
 
         AccountDTO accountDTO = responseEntity.getBody();
-        AccountResource accountResource = new AccountResource();
-        accountResource.setId(accountDTO.getId());
-        accountResource.setAccountName(accountDTO.getAccountName());
-        accountResource.setAccountDescription(accountDTO.getAccountDescription());
 
-        return accountResource;
+        return AccountMapper.DTOtoResource(accountDTO);
     }
 
     public AccountResource getDefaultAccount() {

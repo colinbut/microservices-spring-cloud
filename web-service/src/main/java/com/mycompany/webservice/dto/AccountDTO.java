@@ -5,35 +5,15 @@
  */
 package com.mycompany.webservice.dto;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@Builder
+@NoArgsConstructor
 public class AccountDTO {
     private int id;
     private String accountName;
     private String accountDescription;
-
-    public int getId() {
-        return id;
-    }
-
-    public AccountDTO setId(int id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getAccountName() {
-        return accountName;
-    }
-
-    public AccountDTO setAccountName(String accountName) {
-        this.accountName = accountName;
-        return this;
-    }
-
-    public String getAccountDescription() {
-        return accountDescription;
-    }
-
-    public AccountDTO setAccountDescription(String accountDescription) {
-        this.accountDescription = accountDescription;
-        return this;
-    }
 }
