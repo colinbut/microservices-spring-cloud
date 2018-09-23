@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @Slf4j
 @RestController
@@ -34,17 +35,23 @@ public class AccountController {
 
         log.info("Fetching account with accountNumber: {}", accountNumber);
 
-        Account account = accountRepository.findOne(accountNumber);
+        Optional<Account> optionalAccount = accountRepository.findById(accountNumber);
 
-        log.info("Found account: {} from Storage", account);
+        if (optionalAccount.isPresent()) {
+            Account account = optionalAccount.get();
 
-        AccountDTO accountDTO = AccountDTO.builder()
-            .id(account.getId())
-            .accountName(account.getAccountName())
-            .accountDescription(account.getAccountDescription())
-            .build();
+            log.info("Found account: {} from Storage", account);
 
-        return ResponseEntity.ok(accountDTO);
+            AccountDTO accountDTO = AccountDTO.builder()
+                .id(account.getId())
+                .accountName(account.getAccountName())
+                .accountDescription(account.getAccountDescription())
+                .build();
+
+            return ResponseEntity.ok(accountDTO);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PostMapping

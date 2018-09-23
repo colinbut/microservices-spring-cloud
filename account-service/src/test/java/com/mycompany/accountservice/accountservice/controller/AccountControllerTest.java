@@ -12,6 +12,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.Optional;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 // TODO replace with spring unit-integration tests
@@ -33,8 +35,9 @@ public class AccountControllerTest {
         account.setAccountDescription("AccountDescription");
 
         int accountNumber = 1;
+        Optional optional = Optional.of(account);
 
-        Mockito.when(accountRepository.findOne(accountNumber)).thenReturn(account);
+        Mockito.when(accountRepository.findById(accountNumber)).thenReturn(optional);
 
         ResponseEntity<AccountDTO> responseEntity = classUnderTest.getAccount(accountNumber);
 
@@ -45,6 +48,6 @@ public class AccountControllerTest {
         assertThat(accountDTO.getId()).isEqualTo(1);
         assertThat(accountDTO.getAccountName()).isEqualTo("AccountName");
         assertThat(accountDTO.getAccountDescription()).isEqualTo("AccountDescription");
-        Mockito.verify(accountRepository, Mockito.times(1)).findOne(accountNumber);
+        Mockito.verify(accountRepository, Mockito.times(1)).findById(accountNumber);
     }
 }
