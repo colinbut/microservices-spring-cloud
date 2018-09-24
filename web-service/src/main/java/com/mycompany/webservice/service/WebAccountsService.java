@@ -16,6 +16,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Optional;
+
 @Service
 public class WebAccountsService {
 
@@ -34,7 +36,7 @@ public class WebAccountsService {
         ResponseEntity<AccountDTO> responseEntity = restTemplate.getForEntity(serviceURL + "/accounts/{accountNumber}",
             AccountDTO.class, accountNumber);
 
-        AccountDTO accountDTO = responseEntity.getBody();
+        AccountDTO accountDTO = Optional.ofNullable(responseEntity.getBody()).orElseThrow(() -> new NullPointerException(""));
 
         return AccountMapper.DTOtoResource(accountDTO);
     }
