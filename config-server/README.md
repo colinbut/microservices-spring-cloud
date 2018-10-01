@@ -1,7 +1,7 @@
-# Config Service
+# Config Server
 
 This micro service represents a Centralized Configuration Server serving configuration property files to other
-micro services. This is the Config Server.
+micro services.
 
 It by default connects to the github repo: https://github.com/colinbut/microservices-spring-cloud-netflix-oss-config-files
 
