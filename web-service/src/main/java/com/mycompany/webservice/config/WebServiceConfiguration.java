@@ -6,18 +6,14 @@
 package com.mycompany.webservice.config;
 
 import com.mycompany.webservice.service.WebAccountsService;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
-@SpringBootApplication
 @EnableDiscoveryClient
 @EnableCircuitBreaker
-@ComponentScan(useDefaultFilters = false)
 public class WebServiceConfiguration {
 
     @Bean
