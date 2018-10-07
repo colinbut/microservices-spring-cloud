@@ -22,10 +22,10 @@ public final class AccountMapper {
     }
 
     public static AccountResource DTOtoResource(AccountDTO accountDTO) {
-        AccountResource accountResource = new AccountResource();
-        accountResource.setId(accountDTO.getId());
-        accountResource.setAccountName(accountDTO.getAccountName());
-        accountResource.setAccountDescription(accountDTO.getAccountDescription());
-        return accountResource;
+        return AccountResource.builder()
+            .id(accountDTO.getId())
+            .accountName(accountDTO.getAccountName())
+            .accountDescription(accountDTO.getAccountDescription())
+            .build();
     }
 }

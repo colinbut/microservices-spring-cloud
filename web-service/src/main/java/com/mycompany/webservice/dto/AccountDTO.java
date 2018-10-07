@@ -5,15 +5,11 @@
  */
 package com.mycompany.webservice.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.Value;
 
-@Getter
+@Value
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class AccountDTO {
     private int id;
     private String accountName;

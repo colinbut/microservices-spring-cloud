@@ -50,11 +50,11 @@ public class WebAccountsService {
     }
 
     public AccountResource getDefaultAccount(String accountNumber) {
-        AccountResource accountResource = new AccountResource();
-        accountResource.setId(Integer.parseInt(accountNumber));
-        accountResource.setAccountName("Current Account");
-        accountResource.setAccountDescription("The bank's current account offering");
-        return accountResource;
+        return AccountResource.builder()
+            .id(Integer.parseInt(accountNumber))
+            .accountName("Current Account")
+            .accountDescription("The bank's current account offering")
+            .build();
     }
 
 }

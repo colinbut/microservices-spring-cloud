@@ -5,32 +5,13 @@
  */
 package com.mycompany.webservice.controller.resource;
 
+import lombok.Builder;
+import lombok.Value;
+
+@Value
+@Builder
 public class AccountResource {
     private int id;
     private String accountName;
     private String accountDescription;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getAccountName() {
-        return accountName;
-    }
-
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
-
-    public String getAccountDescription() {
-        return accountDescription;
-    }
-
-    public void setAccountDescription(String accountDescription) {
-        this.accountDescription = accountDescription;
-    }
 }
