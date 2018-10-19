@@ -18,7 +18,7 @@ Spring Cloud / Netflix OSS
 | --------------------------- | :----------------------------: | ----------------- |
 | Service Discovery           | Spring Cloud Eureka            | Eureka            |
 | Load Balancing              | Spring Cloud Ribbon            | Ribbon            |
-| Circuit Breaker             | Spring Cloud Hysterix          | Hysterix          |
+| Circuit Breaker             | Spring Cloud Hystrix           | Hystrix           |
 | Centralized Configuration   | Spring Cloud Config Server     | [NONE]            |
 
 ### Running Locally
